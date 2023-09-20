@@ -6,6 +6,56 @@ $route['default_controller'] = 'TrangChu';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//Route customer
+$route['khach-hang'] = 'Website/KhachHang/index';
+$route['khach-hang/don-hang/(:any)'] = 'Website/KhachHang/Detail/$1';
+$route['khach-hang/don-hang/huy-don/(:any)'] = 'Website/KhachHang/removeOrder/$1';
+$route['khach-hang/cap-nhat'] = 'Website/KhachHang/Update';
+
+
+//Route pay order
+$route['thanh-toan'] = 'Website/ThanhToan/index';
+$route['thanh-toan/thuc-hien'] = 'Website/ThanhToan/PayOrder';
+
+
+//Route cart 
+$route['gio-hang'] = 'Website/GioHang/index';
+$route['gio-hang/them/(:any)/(:any)'] = 'Website/GioHang/Add/$1/$2';
+$route['gio-hang/them-chi-tiet/(:any)/(:any)/(:any)'] = 'Website/GioHang/AddDetail/$1/$2/$3/';
+$route['gio-hang/xoa/(:any)'] = 'Website/GioHang/DeleteById/$1';
+$route['gio-hang/sua-mau/(:any)/(:any)'] = 'Website/GioHang/UpdateColor/$1/$2';
+$route['gio-hang/sua-so-luong/(:any)/(:any)'] = 'Website/GioHang/UpdateNumber/$1/$2';
+$route['gio-hang/ma-giam-gia/(:any)'] = 'Website/GioHang/Code/$1';
+$route['gio-hang/thanh-toan'] = 'Website/GioHang/checkCart';
+
+
+//Route product
+$route['san-pham'] = 'Website/SanPham/index';
+$route['san-pham/trang/(:any)'] = 'Website/SanPham/Page/$1';
+$route['san-pham/mau/(:any)'] = 'Website/SanPham/Color/$1';
+$route['san-pham/mau/(:any)/trang/(:any)'] = 'Website/SanPham/PageColor/$1/$2';
+$route['san-pham/(:any)'] = 'Website/SanPham/Detail/$1';
+$route['tim-kiem'] = 'Website/SanPham/Search';
+$route['tim-kiem/trang/(:any)'] = 'Website/SanPham/PageSearch/$1';
+
+//Route news
+$route['tin-tuc'] = 'Website/TinTuc/index';
+$route['tin-tuc/trang/(:any)'] = 'Website/TinTuc/Page/$1';
+$route['tin-tuc/(:any)'] = 'Website/TinTuc/Detail/$1';
+
+//Route contact
+$route['lien-he'] = 'Website/LienHe/index';
+
+//Route login
+$route['dang-nhap'] = 'Website/DangNhap/Login';
+$route['dang-xuat'] = 'Website/DangXuat';
+$route['dang-ky'] = 'Website/DangNhap/Register';
+
+$route['chuyen-muc'] = 'Website/ChuyenMuc/index';
+$route['chuyen-muc/trang/(:any)'] = 'Website/ChuyenMuc/Page/$1';
+$route['chuyen-muc/(:any)'] = 'Website/ChuyenMuc/Detail/$1';
+$route['chuyen-muc/(:any)/trang/(:any)'] = 'Website/ChuyenMuc/PageDetail/$1/$2';
+
 $route['admin'] = 'Admin/TrangChu';
 $route['admin/thong-ke-chuyen-muc'] = 'Admin/TrangChu/categoryPopular';
 $route['admin/thong-ke-doanh-thu'] = 'Admin/TrangChu/sumRevenue';
@@ -79,6 +129,7 @@ $route['admin/ma-giam-gia/thung-rac/khoi-phuc/(:any)'] = 'Admin/MaGiamGia/reset/
 $route['admin/ma-giam-gia/thung-rac/khoi-phuc'] = 'Admin/MaGiamGia/resetAll';
 $route['admin/ma-giam-gia/thung-rac/xoa/(:any)'] = 'Admin/MaGiamGia/delete/$1';
 $route['admin/ma-giam-gia/thung-rac/xoa'] = 'Admin/MaGiamGia/deleteAll/$1';
+
 
 //Route admin contact
 $route['admin/lien-he'] = 'Admin/LienHe/index';
